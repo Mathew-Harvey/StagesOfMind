@@ -1,0 +1,204 @@
+{
+  "stages": [
+    {
+      "id": 1,
+      "title": "Reactive Survival",
+      "description": "Pure existence without self-reflection. You're all sensation and reaction - hungry, tired, comfortable, uncomfortable. No separation between you and experience.",
+      "quote": "Have you ever watched an infant discovering their hands? That look of 'Holy shit, these are mine?!' That's where we all started...",
+      "quoteAuthor": "Bill Hicks",
+      "examples": "Infants, people in states of extreme survival emergency, moments of pure flow state",
+      "pathways": "Certain meditation practices that focus on pure sensory experience; moments of complete absorption in physical activity"
+    },
+    {
+      "id": 2,
+      "title": "Personal Self",
+      "description": "Discovering yourself as separate from the world. You have wants, needs, and feelings that are uniquely yours. The world revolves around you.",
+      "quote": "Kids are the only honest people left on the planet. 'I want that toy!' No social niceties, no 'Well, actually, I was thinking that perhaps if it wouldn't be too much trouble...' Just pure, unfiltered desire.",
+      "quoteAuthor": "Bill Hicks",
+      "examples": "Young children, moments of unapologetic self-interest in adults, people focused solely on personal desires",
+      "pathways": "Focused self-exploration therapy; practices that reconnect you with authentic desires"
+    },
+    {
+      "id": 3,
+      "title": "Social Self",
+      "description": "Discovering that others' opinions matter. Your identity is defined by relationships and social expectations. You internalize the rules and values of your tribe.",
+      "quote": "Go back to bed, America. Your government has figured out how the world works... Here's American Gladiators. Watch this, shut up, go back to bed America, here is American Gladiators, here is 56 channels of it!",
+      "quoteAuthor": "Bill Hicks",
+      "examples": "Most adults, corporate employees, those who primarily identify with their social roles or groups",
+      "pathways": "Immersion in new cultural environments; intentional exposure to diverse perspectives; some group psychedelic experiences"
+    },
+    {
+      "id": 4,
+      "title": "Rational Agency",
+      "description": "Developing independent thought. You question social norms, evaluate evidence critically, and form your own conclusions. Things are true or false regardless of what others believe.",
+      "quote": "Think for yourself, question authority. Throughout human history, as our species has faced the frightening, terrorizing fact that we do not know who we are, or where we are going in this ocean of chaos...",
+      "quoteAuthor": "Bill Hicks",
+      "examples": "Scientists, independent thinkers, philosophers, social critics",
+      "pathways": "Rigorous study of critical thinking; debate; practices that challenge assumptions"
+    },
+    {
+      "id": 5,
+      "title": "Self Authoring",
+      "description": "Recognizing that you create your reality. You understand how your needs shape your feelings, how your preferences shape your identity, and you take responsibility for who you are.",
+      "quote": "The world is like a ride at an amusement park, and when you choose to go on it, you think it's real, because that's how powerful our minds are... But it doesn't matter because it's just a ride, and we can change it anytime we want.",
+      "quoteAuthor": "Bill Hicks",
+      "examples": "Wise teachers, integrated leaders, masterful therapists, mature artists",
+      "pathways": "Deep shadow work; authentic relating practices; conscious relationship to archetypes"
+    },
+    {
+      "id": 6,
+      "title": "Enlightened Mind",
+      "description": "Direct perception of the constructed nature of reality. You see how the mind creates qualia and experience. The boundary between self and mind begins to dissolve.",
+      "quote": "Today, a young man on acid realized that all matter is merely energy condensed to a slow vibration – that we are all one consciousness experiencing itself subjectively. There's no such thing as death, life is only a dream...",
+      "quoteAuthor": "Bill Hicks",
+      "examples": "Advanced meditators, mystics, those who've had profound non-dual experiences",
+      "pathways": "Deep meditation practices; structured psychedelic experiences with integration (DMT, ayahuasca); certain breathwork techniques"
+    },
+    {
+      "id": 7,
+      "title": "Transcendent Mind",
+      "description": "Beyond conventional consciousness. The self as traditionally understood dissolves, opening possibilities for radically different forms of awareness and being.",
+      "quote": "Here's Tom with the weather.",
+      "quoteAuthor": "Bill Hicks",
+      "examples": "Perhaps not fully achievable in conventional human form; glimpses in profound mystical states",
+      "pathways": "Joscha Bach speculates this might be more relevant to the future evolution of consciousness, possibly through AGI integration"
+    }
+  ],
+  "assessment": {
+    "questions": [
+      {
+        "id": 1,
+        "question": "When faced with a challenging situation, what is your first instinct?",
+        "description": "Think about your immediate response, not what you do after reflection.",
+        "options": [
+          { "id": "a", "text": "React emotionally based on how it makes me feel", "stages": { "1": 3, "2": 2, "3": 1 } },
+          { "id": "b", "text": "Consider how others would expect me to respond", "stages": { "3": 3, "4": 1 } },
+          { "id": "c", "text": "Analyze the problem logically to find the best solution", "stages": { "4": 3, "5": 1 } },
+          { "id": "d", "text": "Consider multiple perspectives and potential outcomes", "stages": { "5": 2, "6": 2 } },
+          { "id": "e", "text": "Notice my thoughts arising but don't immediately identify with them", "stages": { "6": 3, "7": 1 } }
+        ]
+      },
+      {
+        "id": 2,
+        "question": "Which statement best describes your view of personal identity?",
+        "description": "What feels most true about who you are at your core?",
+        "options": [
+          { "id": "a", "text": "I am my needs, desires, and emotions", "stages": { "1": 1, "2": 3 } },
+          { "id": "b", "text": "I am my relationships and roles in society", "stages": { "3": 3 } },
+          { "id": "c", "text": "I am my values, beliefs, and rational mind", "stages": { "4": 3 } },
+          { "id": "d", "text": "I create my identity through conscious choices", "stages": { "5": 3 } },
+          { "id": "e", "text": "Identity is fluid and constructed by the mind", "stages": { "6": 3 } },
+          { "id": "f", "text": "Identity is an illusion; consciousness exists prior to self", "stages": { "7": 3 } }
+        ]
+      },
+      {
+        "id": 3,
+        "question": "When someone disagrees with an opinion you hold strongly, you typically:",
+        "description": "Think about your most natural response in conversations.",
+        "options": [
+          { "id": "a", "text": "Feel personally attacked and get defensive", "stages": { "2": 3, "3": 1 } },
+          { "id": "b", "text": "Worry about maintaining harmony in the relationship", "stages": { "3": 3 } },
+          { "id": "c", "text": "Try to convince them with facts and logical arguments", "stages": { "4": 3 } },
+          { "id": "d", "text": "Get curious about their perspective and why we see things differently", "stages": { "5": 3 } },
+          { "id": "e", "text": "See both views as partial truths within a larger context", "stages": { "6": 3 } },
+          { "id": "f", "text": "Observe the arising of opinions without attachment to either view", "stages": { "7": 3 } }
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Which best describes your relationship with societal rules and norms?",
+        "description": "How do you generally view cultural expectations?",
+        "options": [
+          { "id": "a", "text": "I follow them to avoid punishment or rejection", "stages": { "2": 1, "3": 3 } },
+          { "id": "b", "text": "I value them as important for social cohesion", "stages": { "3": 3 } },
+          { "id": "c", "text": "I evaluate them based on logic and principles", "stages": { "4": 3 } },
+          { "id": "d", "text": "I create my own value system that may or may not align with society", "stages": { "5": 3 } },
+          { "id": "e", "text": "I see them as constructs that can be useful but aren't inherently true", "stages": { "6": 3 } },
+          { "id": "f", "text": "I move fluidly between different frameworks as appropriate", "stages": { "7": 3 } }
+        ]
+      },
+      {
+        "id": 5,
+        "question": "When making an important life decision, what factors weigh most heavily?",
+        "description": "What ultimately drives your biggest choices?",
+        "options": [
+          { "id": "a", "text": "What I want and what makes me happy", "stages": { "2": 3 } },
+          { "id": "b", "text": "What others would think or expect of me", "stages": { "3": 3 } },
+          { "id": "c", "text": "What makes the most logical sense based on evidence", "stages": { "4": 3 } },
+          { "id": "d", "text": "What aligns with my personal values and vision", "stages": { "5": 3 } },
+          { "id": "e", "text": "What serves the greater whole and multiple perspectives", "stages": { "6": 3 } },
+          { "id": "f", "text": "The choice emerges naturally when I'm not identified with the decider", "stages": { "7": 3 } }
+        ]
+      },
+      {
+        "id": 6,
+        "question": "How do you typically experience difficult emotions?",
+        "description": "When you feel anger, fear, or sadness, what's your relationship with those feelings?",
+        "options": [
+          { "id": "a", "text": "I am those emotions; they overtake me completely", "stages": { "1": 3, "2": 2 } },
+          { "id": "b", "text": "I try to control them to maintain social relationships", "stages": { "3": 3 } },
+          { "id": "c", "text": "I analyze them to understand what caused them", "stages": { "4": 3 } },
+          { "id": "d", "text": "I see them as information about my values and needs", "stages": { "5": 3 } },
+          { "id": "e", "text": "I observe them as passing phenomena in awareness", "stages": { "6": 3 } },
+          { "id": "f", "text": "I experience them fully while recognizing they're not who I am", "stages": { "7": 3 } }
+        ]
+      },
+      {
+        "id": 7,
+        "question": "Which statement best reflects your view on contradictions and paradoxes?",
+        "description": "How do you handle seemingly opposing truths?",
+        "options": [
+          { "id": "a", "text": "They're confusing and frustrating", "stages": { "2": 2, "3": 2 } },
+          { "id": "b", "text": "One side must be right and the other wrong", "stages": { "3": 1, "4": 2 } },
+          { "id": "c", "text": "They can be resolved with enough logical analysis", "stages": { "4": 3 } },
+          { "id": "d", "text": "They're interesting and can hold partial truths", "stages": { "5": 3 } },
+          { "id": "e", "text": "They're natural and reveal the limits of conceptual thinking", "stages": { "6": 3 } },
+          { "id": "f", "text": "They dissolve when viewed from awareness beyond concepts", "stages": { "7": 3 } }
+        ]
+      },
+      {
+        "id": 8,
+        "question": "How would you describe your sense of connection to others?",
+        "description": "What feels most true about your relationship with other people?",
+        "options": [
+          { "id": "a", "text": "Others are primarily there to meet my needs", "stages": { "2": 3 } },
+          { "id": "b", "text": "Connection comes through conforming to social expectations", "stages": { "3": 3 } },
+          { "id": "c", "text": "I connect with those who share my values and goals", "stages": { "4": 3 } },
+          { "id": "d", "text": "I can connect deeply while maintaining my boundaries", "stages": { "5": 3 } },
+          { "id": "e", "text": "We're all interconnected parts of a larger whole", "stages": { "6": 3 } },
+          { "id": "f", "text": "Separation is an illusion; consciousness is shared", "stages": { "7": 3 } }
+        ]
+      },
+      {
+        "id": 9,
+        "question": "When you encounter something new that challenges your beliefs, you tend to:",
+        "description": "How do you approach intellectual or spiritual challenges?",
+        "options": [
+          { "id": "a", "text": "Reject it if it doesn't fit with what I already believe", "stages": { "3": 3 } },
+          { "id": "b", "text": "Analyze it logically to see if it makes sense", "stages": { "4": 3 } },
+          { "id": "c", "text": "Integrate useful aspects into my evolving worldview", "stages": { "5": 3 } },
+          { "id": "d", "text": "Appreciate how it expands my understanding", "stages": { "6": 3 } },
+          { "id": "e", "text": "Recognize all beliefs as mental constructs", "stages": { "7": 3 } }
+        ]
+      },
+      {
+        "id": 10,
+        "question": "Which statement best captures your experience of consciousness?",
+        "description": "What feels most true about your moment-to-moment experience?",
+        "options": [
+          { "id": "a", "text": "I experience life through my personal desires and emotions", "stages": { "2": 3 } },
+          { "id": "b", "text": "My identity is shaped by my social roles and relationships", "stages": { "3": 3 } },
+          { "id": "c", "text": "I am a rational agent making decisions based on evidence", "stages": { "4": 3 } },
+          { "id": "d", "text": "I actively create meaning and author my own story", "stages": { "5": 3 } },
+          { "id": "e", "text": "I witness my thoughts and experiences arising in awareness", "stages": { "6": 3 } },
+          { "id": "f", "text": "I am the boundless awareness in which all experience appears", "stages": { "7": 3 } }
+        ]
+      }
+    ]
+  },
+  "config": {
+    "assessmentTitle": "Discover Your Mind Stage",
+    "resultsTitle": "Your Mind Development Profile"
+
+  }
+}
