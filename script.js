@@ -1,4 +1,96 @@
 // --- 1. Initialization ---
+
+// Store original content references
+let originalContent = {
+    heroTitle: '',
+    heroSubtitle: '',
+    heroQuote: '',
+    heroQuoteAuthor: '',
+    introContent: '',
+    timelineTitle: '',
+    timelineDescription: '',
+    stageContent: []
+};
+
+// Biblical content for each section
+const biblicalContent = {
+    heroTitle: 'The <span>Genesis</span> of Consciousness',
+    heroSubtitle: 'Exploring the parallels between the seven days of creation and the development of human consciousness.',
+    heroQuote: '"In the beginning, God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep."',
+    heroQuoteAuthor: '— Genesis 1:1-2',
+    introContent: 'The story of Genesis can be read not just as a cosmological narrative, but as a profound allegory for the development of human consciousness. Each "day" of creation parallels a stage in how our minds construct reality and meaning.',
+    timelineTitle: 'The Seven Days of Creation as Stages of Mind',
+    timelineDescription: 'Explore how each day of the Genesis creation story mirrors a stage in the development of consciousness, from basic awareness to transcendent realization.'
+};
+
+// Biblical content for each stage
+const biblicalStages = [
+    // Stage 1 - Day 1
+    {
+        badge: 'DAY 1',
+        title: 'Let There Be Light',
+        description: 'The first day of creation: "And God said, Let there be light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness." (Genesis 1:3-4)',
+        content: 'Just as God brings forth light to distinguish it from darkness, the infant\'s mind has its first "let there be light" moment - the emergence of basic awareness. This stage represents the dawn of consciousness, the most fundamental division between perception and non-perception. Like the cosmos shifting from void to having the basic distinction of light and dark, the newborn mind begins to distinguish basic sensations and patterns.',
+        quote: 'The mind\'s first creative act, like God\'s, is to create light from darkness - to begin distinguishing sensations and forming a perceptual world.',
+        author: 'Joscha Bach'
+    },
+    // Stage 2 - Day 2
+    {
+        badge: 'DAY 2',
+        title: 'The Firmament Divides the Waters',
+        description: 'The second day of creation: "And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters." (Genesis 1:6)',
+        content: 'God creates separation between the waters above and below, establishing boundaries and structure. Similarly, the young child\'s mind creates its first major boundary - between self and other. The "firmament" represents the emerging self-construct that divides the once undifferentiated "waters" of experience into what is "me" and what is "not me." This fundamental duality creates the foundation for the young child\'s personal identity.',
+        quote: 'The firmament of personal identity divides the waters of consciousness, creating the first and most fundamental boundary between self and world.',
+        author: 'Robert Kegan'
+    },
+    // Stage 3 - Day 3
+    {
+        badge: 'DAY 3',
+        title: 'Dry Land and Vegetation',
+        description: 'The third day of creation: "And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear... And the earth brought forth grass, and herb..." (Genesis 1:9-12)',
+        content: 'God creates stable ground and living things rooted in that ground. This reflects how the adolescent mind finds "solid footing" in social belonging and cultural identity. Just as plants draw nourishment from the earth, the social self draws stability and meaning from cultural systems. The emergence of dry land represents finding a "firm foundation" in shared reality, while the vegetation symbolizes how our identities become "rooted" in the values and expectations of our social groups.',
+        quote: 'Finding your tribe is like discovering dry land amid chaotic waters. It gives you somewhere to stand, and the cultural seeds planted there become the vegetation of your social identity.',
+        author: 'Joscha Bach'
+    },
+    // Stage 4 - Day 4
+    {
+        badge: 'DAY 4',
+        title: 'Sun, Moon, and Stars',
+        description: 'The fourth day of creation: "And God said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years." (Genesis 1:14)',
+        content: 'God creates celestial bodies that provide objective measures of time and direction. This parallels the development of rational thinking that can stand apart from social consensus. Like the sun illuminating the world and providing orientation, reason gives us the ability to independently judge truth and falsehood. The rational mind can observe cyclic patterns, predict outcomes, and navigate by principles rather than just social approval. The "greater light" of reason allows us to see clearly where before we merely followed others.',
+        quote: 'Rational thought is the sun that allows you to see clearly what was once only perceived through the reflected light of others\' opinions.',
+        author: 'Bill Hicks'
+    },
+    // Stage 5 - Day 5
+    {
+        badge: 'DAY 5',
+        title: 'Life in Sea and Sky',
+        description: 'The fifth day of creation: "And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth..." (Genesis 1:20)',
+        content: 'God creates mobile life forms that can navigate freely through water and air. This represents the self-authoring mind that can move fluidly between different perspectives and frameworks. Like fish exploring the depths and birds soaring through the sky, the self-authoring mind can inhabit multiple domains of meaning. No longer rooted in a single cultural system, it can swim through different worldviews and soar above them to create its own authentic meaning.',
+        quote: 'The self-authoring mind is like a bird released from its cage, suddenly free to fly wherever it wishes, no longer bound to the limits of the ground.',
+        author: 'Robert Kegan'
+    },
+    // Stage 6 - Day 6
+    {
+        badge: 'DAY 6',
+        title: 'Land Animals and Humans',
+        description: 'The sixth day of creation: "And God said, Let us make man in our image, after our likeness... So God created man in his own image." (Genesis 1:26-27)',
+        content: 'God creates beings in the divine image, capable of self-awareness and stewardship. This parallels the enlightened mind that recognizes itself as a reflection of consciousness itself. Just as humans in Genesis are given dominion over other creatures, the enlightened mind can observe and direct its own mental processes. Created "in the image of God," humans represent consciousness that can reflect on itself, aware of its own aware-ing. At this stage, one realizes that consciousness is not just something we have but what we fundamentally are.',
+        quote: 'Today, a young man on acid realized that all matter is merely energy condensed to a slow vibration – that we are all one consciousness experiencing itself subjectively.',
+        author: 'Bill Hicks'
+    },
+    // Stage 7 - Day 7
+    {
+        badge: 'DAY 7',
+        title: 'Divine Rest',
+        description: 'The seventh day of creation: "And on the seventh day God ended his work which he had made; and he rested..." (Genesis 2:2)',
+        content: 'God rests and sanctifies the seventh day, marking the completion of creation. This represents the transcendent mind that has moved beyond all striving and duality into perfect unity and peace. Just as creation is complete on the seventh day, the transcendent mind rests in the realization that nothing needs to be changed or improved - all is as it should be. There is a cessation of the ego\'s constant doing in favor of simply being. This is the mind at one with its source, resting in what some traditions call "God-consciousness."',
+        quote: 'Here\'s Tom with the weather.',
+        author: 'Bill Hicks'
+    }
+];
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
     initPreloader();
@@ -8,15 +100,20 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticleBackground();
     initScrollReveal();
     initStagesVisualization();
-    initTimeline();
+    initTimeline(); // Initialize timeline first (may rely on stagesData)
     initScrollToTop();
     initCurrentYear();
     initSmoothScrollPolyfill();
     initParallaxEffects();
+    
+    // Add these two lines for biblical view toggle
+    captureOriginalContent();
+    initBiblicalViewToggle();
 
     // Load stages data and config
     fetchStagesData().then(data => {
         const stagesData = data.stages;
+        window.stagesData = stagesData; // Make stagesData globally accessible for initTimeline
         const config = data.config;
         const assessmentQuestions = data.assessment ? data.assessment.questions : []; // Get questions from JSON
 
@@ -34,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         initStageNavigator(stagesData); // Updated function call
-        initTimeline(); // Initialize timeline after data is fetched
+        initTimeline(); // Re-initialize timeline to ensure content is correct after data load
     }).catch(error => {
         console.error('Failed to load stages data:', error);
         // Show error message to user
@@ -1391,3 +1488,182 @@ function initTimeline() {
 }
 
 // Horizontal slider for stages
+
+// Biblical View Toggle Functionality
+function initBiblicalViewToggle() {
+    const biblicalViewToggle = document.querySelector('.biblical-view-toggle');
+    if (!biblicalViewToggle) return;
+    
+    // Check for saved preference
+    const savedView = localStorage.getItem('biblicalView') || 'normal';
+    document.documentElement.setAttribute('data-view', savedView);
+    
+    if (savedView === 'biblical') {
+        biblicalViewToggle.classList.add('active');
+        activateBiblicalView();
+    }
+    
+    biblicalViewToggle.addEventListener('click', () => {
+        const currentView = document.documentElement.getAttribute('data-view');
+        const newView = currentView === 'biblical' ? 'normal' : 'biblical';
+        
+        document.documentElement.setAttribute('data-view', newView);
+        localStorage.setItem('biblicalView', newView);
+        
+        if (newView === 'biblical') {
+            biblicalViewToggle.classList.add('active');
+            activateBiblicalView();
+        } else {
+            biblicalViewToggle.classList.remove('active');
+            deactivateBiblicalView();
+        }
+    });
+}
+
+// Capture original content when page loads
+function captureOriginalContent() {
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    const heroQuote = document.querySelector('.hero-quote p');
+    const heroQuoteAuthor = document.querySelector('.hero-quote-author');
+    const introContent = document.querySelector('.intro-content p:first-child');
+    const timelineTitle = document.getElementById('timeline-main-title');
+    const timelineDescription = document.querySelector('.timeline__title p');
+    
+    if (heroTitle) originalContent.heroTitle = heroTitle.innerHTML;
+    if (heroSubtitle) originalContent.heroSubtitle = heroSubtitle.innerHTML;
+    if (heroQuote) originalContent.heroQuote = heroQuote.innerHTML;
+    if (heroQuoteAuthor) originalContent.heroQuoteAuthor = heroQuoteAuthor.textContent;
+    if (introContent) originalContent.introContent = introContent.innerHTML;
+    if (timelineTitle) originalContent.timelineTitle = timelineTitle.innerHTML;
+    if (timelineDescription) originalContent.timelineDescription = timelineDescription.innerHTML;
+    
+    // Capture timeline stage content
+    const stageElements = document.querySelectorAll('.timeline ul li .content');
+    originalContent.stageContent = Array.from(stageElements).map(el => el.innerHTML);
+}
+
+function activateBiblicalView() {
+    // Update content with biblical parallels
+    updateHeroSectionBiblical();
+    updateIntroductionBiblical();
+    updateTimelineBiblical();
+    updateAssessmentBiblical();
+}
+
+function deactivateBiblicalView() {
+    // Restore original content
+    restoreOriginalContent();
+}
+
+// Update sections with biblical content
+function updateHeroSectionBiblical() {
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    const heroQuote = document.querySelector('.hero-quote p');
+    const heroQuoteAuthor = document.querySelector('.hero-quote-author');
+    
+    if (heroTitle) heroTitle.innerHTML = biblicalContent.heroTitle;
+    if (heroSubtitle) heroSubtitle.innerHTML = biblicalContent.heroSubtitle;
+    if (heroQuote) heroQuote.innerHTML = biblicalContent.heroQuote;
+    if (heroQuoteAuthor) heroQuoteAuthor.textContent = biblicalContent.heroQuoteAuthor;
+}
+
+function updateIntroductionBiblical() {
+    const introContent = document.querySelector('.intro-content p:first-child');
+    if (introContent) introContent.innerHTML = biblicalContent.introContent;
+}
+
+function updateTimelineBiblical() {
+    const timelineTitle = document.getElementById('timeline-main-title');
+    const timelineDescription = document.querySelector('.timeline__title p');
+    
+    if (timelineTitle) timelineTitle.innerHTML = biblicalContent.timelineTitle;
+    if (timelineDescription) timelineDescription.innerHTML = biblicalContent.timelineDescription;
+    
+    // Update each stage in the timeline
+    const stageElements = document.querySelectorAll('.timeline ul li .content');
+    
+    stageElements.forEach((element, index) => {
+        if (index < biblicalStages.length) {
+            const stage = biblicalStages[index];
+            
+            const badge = element.querySelector('.badge');
+            const title = element.querySelector('h3');
+            const description = element.querySelector('p'); // First paragraph is description
+            const contentParagraph = element.querySelector('.quote')?.previousElementSibling; // Get the paragraph *before* the quote
+            const quote = element.querySelector('.quote p');
+            const author = element.querySelector('.quote-author');
+            
+            // Only update if elements exist
+            if (badge) badge.textContent = stage.badge;
+            if (title) title.textContent = stage.title;
+            if (description) description.textContent = stage.description;
+            
+            // Update the paragraph between description and quote if it exists
+            if (contentParagraph && contentParagraph.tagName === 'P') {
+                contentParagraph.textContent = stage.content;
+            } else if (description) {
+                // If no paragraph exists between description and quote, insert one
+                const newParagraph = document.createElement('p');
+                newParagraph.textContent = stage.content;
+                // Insert after the description but before the quote div
+                description.parentNode.insertBefore(newParagraph, element.querySelector('.quote'));
+            }
+            
+            if (quote) quote.textContent = stage.quote;
+            if (author) author.textContent = `— ${stage.author}`;
+        }
+    });
+}
+
+function updateAssessmentBiblical() {
+    const assessmentTitle = document.querySelector('.assessment .section-title');
+    const assessmentDescription = document.querySelector('.assessment .section-description');
+    
+    if (assessmentTitle) {
+        assessmentTitle.innerHTML = 'Where Are You in the Creation Story?';
+    }
+    
+    if (assessmentDescription) {
+        assessmentDescription.innerHTML = 'Reflect on which day of creation resonates most with your current state of consciousness and perspective.';
+    }
+}
+
+function restoreOriginalContent() {
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    const heroQuote = document.querySelector('.hero-quote p');
+    const heroQuoteAuthor = document.querySelector('.hero-quote-author');
+    const introContent = document.querySelector('.intro-content p:first-child');
+    const timelineTitle = document.getElementById('timeline-main-title');
+    const timelineDescription = document.querySelector('.timeline__title p');
+    
+    if (heroTitle) heroTitle.innerHTML = originalContent.heroTitle;
+    if (heroSubtitle) heroSubtitle.innerHTML = originalContent.heroSubtitle;
+    if (heroQuote) heroQuote.innerHTML = originalContent.heroQuote;
+    if (heroQuoteAuthor) heroQuoteAuthor.textContent = originalContent.heroQuoteAuthor;
+    if (introContent) introContent.innerHTML = originalContent.introContent;
+    if (timelineTitle) timelineTitle.innerHTML = originalContent.timelineTitle;
+    if (timelineDescription) timelineDescription.innerHTML = originalContent.timelineDescription;
+    
+    // Restore timeline stages
+    const stageElements = document.querySelectorAll('.timeline ul li .content');
+    stageElements.forEach((element, index) => {
+        if (index < originalContent.stageContent.length) {
+            element.innerHTML = originalContent.stageContent[index];
+        }
+    });
+    
+    // Restore assessment section
+    const assessmentTitle = document.querySelector('.assessment .section-title');
+    const assessmentDescription = document.querySelector('.assessment .section-description');
+    
+    if (assessmentTitle) {
+        assessmentTitle.innerHTML = 'Where Are You on the Journey?';
+    }
+    
+    if (assessmentDescription) {
+        assessmentDescription.innerHTML = 'This isn\'t a definitive label, but a tool for self-reflection. Explore perspectives that resonate most strongly with your current understanding of yourself and the world. Be honest – it\'s your journey.';
+    }
+}
