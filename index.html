@@ -59,7 +59,7 @@
                 <ul class="nav-list">
                     <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
                     <li><a href="#introduction" class="nav-link" data-section="introduction">Concept</a></li>
-                    <li><a href="#stages-overview" class="nav-link" data-section="stages-overview">The Journey</a></li>
+                    <li><a href="#stages-timeline" class="nav-link" data-section="stages-overview">The Journey</a></li>
                     <li><a href="#assessment" class="nav-link" data-section="assessment">Self-Reflection</a></li>
                     <li><a href="#about" class="nav-link" data-section="about">Influences</a></li>
                 </ul>
@@ -91,7 +91,7 @@
                         <h1 class="hero-title reveal fade-in-up" data-delay="400"><span>Unlock</span> Your Stages of Mind</h1>
                         <p class="hero-subtitle reveal fade-in-up" data-delay="600">An immersive journey through the evolution of perspective, inspired by Robert Kegan, Joscha Bach, and the raw insight of Bill Hicks.</p>
                         <div class="hero-buttons reveal fade-in-up" data-delay="800">
-                            <a href="#stages-overview" class="btn btn-primary btn-pulse">
+                            <a href="#introduction" class="btn btn-primary btn-pulse">
                                 <i class="fas fa-compass"></i> Begin the Journey
                             </a>
                             <a href="#assessment" class="btn btn-secondary">
@@ -121,7 +121,7 @@
                     <div class="intro-content">
                         <p>This isn't about levels or hierarchy. It's a dynamic exploration inspired by developmental psychologist <strong class="highlight">Robert Kegan</strong>, cognitive scientist <strong class="highlight">Joscha Bach</strong>, and the unflinching perspective of philosopher-comedian <strong class="highlight">Bill Hicks</strong>. We delve into seven potential stages, or ways of making meaning, that shape our reality.</p>
                         <p>Think of it as a map of the territory of mind. Understanding where you are, and what landscapes lie beyond, can fundamentally alter your experience of the ride. As Hicks put it, <strong class="highlight">"It's just a ride"</strong> – but knowing the mechanics can make it a meaningful one.</p>
-                        <a href="#stages-overview" class="btn btn-tertiary">View the Stages <i class="fas fa-arrow-right"></i></a>
+                        <a href="#stages-timeline" class="btn btn-tertiary">View the Stages <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="intro-visual">
                         <div class="stages-visualization">
@@ -297,10 +297,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="horizontal-scroll-indicator">
+            <!-- <div class="horizontal-scroll-indicator">
                 <span>Explore stages in detail</span>
                 <i class="fas fa-arrow-right"></i>
-            </div>
+            </div> -->
         </section>
 
         <!-- Assessment Section -->
@@ -432,7 +432,11 @@
                     <!-- Author Card: Kegan -->
                     <div class="author-card">
                         <div class="author-image-wrapper">
-                            <div class="author-image kegan-image"></div>
+                            <a href="https://developmentaledge.com/robert-kegan/" target="_blank" rel="noopener noreferrer" class="author-image-link">
+                                <div class="author-image kegan-image">
+                                    <img src="./assets/kegan.jpg" alt="Robert Kegan">
+                                </div>
+                            </a>
                         </div>
                         <div class="author-info">
                             <h3>Robert Kegan</h3>
@@ -444,7 +448,11 @@
                     <!-- Author Card: Bach -->
                     <div class="author-card">
                         <div class="author-image-wrapper">
-                            <div class="author-image bach-image"></div>
+                             <a href="https://joscha.substack.com/" target="_blank" rel="noopener noreferrer" class="author-image-link">
+                                <div class="author-image bach-image">
+                                    <img src="./assets/joscha.png" alt="Joscha Bach">
+                                </div>
+                            </a>
                         </div>
                         <div class="author-info">
                             <h3>Joscha Bach</h3>
@@ -456,7 +464,11 @@
                     <!-- Author Card: Hicks -->
                     <div class="author-card">
                         <div class="author-image-wrapper">
-                            <div class="author-image hicks-image"></div>
+                             <a href="https://en.wikipedia.org/wiki/Bill_Hicks" target="_blank" rel="noopener noreferrer" class="author-image-link">
+                                <div class="author-image hicks-image">
+                                    <img src="./assets/hicks.png" alt="Bill Hicks">
+                                </div>
+                            </a>
                         </div>
                         <div class="author-info">
                             <h3>Bill Hicks</h3>
@@ -483,7 +495,7 @@
         </section> -->
 
         <!-- Newsletter Section -->
-        <section class="newsletter-section section" id="newsletter">
+        <!-- <section class="newsletter-section section" id="newsletter">
             <div class="container">
                 <div class="newsletter-content reveal fade-in">
                     <h2>Continue Your Journey</h2>
@@ -497,7 +509,7 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <!-- Footer -->
@@ -518,32 +530,27 @@
                     </div>
                 </div>
                 <div class="footer-links">
+                </div>
+                <div class="footer-links">
+
+
+                </div>
+                <div class="footer-links">
                     <h3>Navigate</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#introduction">Concept</a></li>
-                        <li><a href="#stages-overview">The Journey</a></li>
+                        <li><a href="#stages-timeline">The Journey</a></li>
                         <li><a href="#assessment">Self-Reflection</a></li>
                         <li><a href="#about">Influences</a></li>
                     </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Resources</h3>
+                    <!-- <h3>Resources TODO</h3>
                     <ul>
                         <li><a href="#">Reading List</a></li>
                         <li><a href="#">Meditation Guides</a></li>
                         <li><a href="#">Research Papers</a></li>
                         <li><a href="#">Events & Workshops</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Contribute</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             <div class="footer-bottom">

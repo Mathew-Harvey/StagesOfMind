@@ -916,7 +916,6 @@ function initAssessment(stagesData, config, questions) {
                 <li>Seek out perspectives different from your own through reading or conversation.</li>
                 <li>Practice mindfulness or meditation to observe your thought patterns.</li>
             </ul>
-            <a href="#" class="btn btn-secondary btn-sm">View More Resources</a>
         `;
     }
     // --- End Placeholder Result Display Functions ---
